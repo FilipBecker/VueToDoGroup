@@ -1,10 +1,8 @@
 const app = Vue.createApp({
     data() {
         return {
-            message: "Hello World",
-            tasks: [
-                "kok"
-            ],
+            title: "My CheckList",
+            tasks: [],
             newTask: ""
         }
     },

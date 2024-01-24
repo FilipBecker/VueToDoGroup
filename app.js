@@ -10,7 +10,6 @@ const app = Vue.createApp({
     },
 
     created() {
-        console.log("hej");
         const localStorageArray = localStorage.getItem('tasksArray');
         this.tasks = localStorageArray ? JSON.parse(localStorageArray) : [];
     },
@@ -20,7 +19,6 @@ const app = Vue.createApp({
             if (this.newTask != "") {
                 this.tasks.push(this.newTask);
                 this.newTask = "";
-                console.log("hejdå");
                 localStorage.setItem('tasksArray', JSON.stringify(this.tasks));
             }
         },

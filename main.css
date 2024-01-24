@@ -21,3 +21,24 @@
     border-radius: 5%;    
 }
 
+ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    background-color: palevioletred;
+    margin: 0 0 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    width: 90%;
+    color: white;
+    overflow-wrap: break-word;
+}
+
+button {
+    color: black;
+    float: right;
+}

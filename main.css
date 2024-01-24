@@ -1,5 +1,6 @@
 #body{
     margin: 0;
+    font-family: Arial, sans-serif;
  }
 
 #app{
@@ -12,13 +13,66 @@
     align-items: center;
 }
 
+#inputBox{
+    height: 25px;
+}
+
+
+
+#flexRowInputAndButton{
+    display: flex;
+    flex-direction: column;
+}
+
 #title{
     margin-top: 10%;
 }
 
 #addTaskBtn{
     margin-top: 5%;
-    border-radius: 5%;    
+    border-radius: 5%;
+    height: 27px;
+}
+
+.taskBtn{
+    height: 19.3px;
+    border: none;
+
+}
+
+#taskOptions{
+    display:flex;
+    flex-direction: column;
+}
+
+#deleteBtn{
+    background-color: rgb(255, 157, 157);
+    border-radius: 0px 6px 0px 0px;
+
+}
+
+#editBtn{
+    background-color: rgb(124, 124, 255);
+    border-radius: 0px 0px 6px 0px;
+
+}
+
+#taskCard{
+    background-color: burlywood;
+    margin-bottom: 5%;
+    border-radius: 6px 0px 0px 6px;
+    padding:10px;
+    margin-left: -104px;
+}
+
+#divFlex{
+    display: flex;
+    flex-direction: row;
+
+}
+li{
+    list-style: none;
+
 }
 
 ul {

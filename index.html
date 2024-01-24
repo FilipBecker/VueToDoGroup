@@ -10,11 +10,28 @@
 </head>
 <body id = "body">
     <div id="app"><h2 id = "title">{{ title }}</h2>
-        <input id = "inputBox" type="text" v-model="newTask">
-        <button @click="addTask" id = "addTaskBtn">Add task</button>
-
+        <div id = "flexRowInputAndButton">
+             <input id = "inputBox" type="text" v-model="newTask">
+             <button @click="addTask" id = "addTaskBtn">Add task</button>
+        </div>
         <ul id = "taskList">
-            <li v-for="x in tasks">{{ x }} <button @click="deleteTask(x)">D</button></li>
+            <li v-for="x in tasks">
+
+                <div id = "divFlex">
+                    <div id = "taskCard">
+                        {{ x }}
+                    </div>
+
+                    <div id = "taskOptions">
+
+                        <button id = "deleteBtn" class = "taskBtn" @click="deleteTask(x)">X</button>
+                        <button id = "editBtn" class = "taskBtn" @click="editTask(x)">E</button>
+
+                    </div>
+                    
+            
+                </div>
+            </li>
         </ul>
     </div>
 

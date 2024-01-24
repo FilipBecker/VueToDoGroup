@@ -7,16 +7,16 @@
 </head>
 <body>
     <div id="app">{{ message }}
-        <input type="text" v-model="inpText">
-        <button @click="task.push(inpText)">add</button>
+        <input type="text" v-model="newTask">
+        <button @click="addTask">add</button>
 
         <ol>
-            <li v-for="x in task">{{ x }} <button @click="task.splice(task.indexOf(x), 1)">D</button></li>
+            <li v-for="x in tasks">{{ x }} <button @click="deleteTask(x)">D</button></li>
         </ol>
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-    <script src="main.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

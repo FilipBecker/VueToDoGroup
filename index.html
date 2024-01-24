@@ -12,7 +12,16 @@
         <button @click="addTask" id = "addTaskBtn">Add task</button>
 
         <ul id = "taskList">
-            <li v-for="x in tasks">{{ x }} <button @click="deleteTask(x)">D</button></li>
+            <li v-for="x in tasks">
+
+                <div id = "divFlex">
+                    <div id = "taskCard">
+                        {{ x }}
+                    </div>
+                    <button @click="deleteTask(x)">X</button>
+            
+                </div>
+            </li>
         </ul>
     </div>
 

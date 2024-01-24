@@ -21,3 +21,19 @@
     border-radius: 5%;    
 }
 
+#taskCard{
+    background-color: burlywood;
+    margin-bottom: 5%;
+    border-radius: 6px;
+    padding:10%;
+}
+
+#divFlex{
+    display: flex;
+    flex-direction: row;
+
+}
+li{
+    list-style: none;
+
+}

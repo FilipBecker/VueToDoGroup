@@ -1,6 +1,6 @@
 #body{
     margin: 0;
-    font-family: Arial, sans-serif;
+    background-color: lavender;
  }
 
 #app{
@@ -11,88 +11,82 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-#inputBox{
-    height: 25px;
-}
-
-
-
-#flexRowInputAndButton{
-    display: flex;
-    flex-direction: column;
+    padding: 20px 40px;
+    width: 100%;
 }
 
 #title{
     margin-top: 10%;
 }
 
-#addTaskBtn{
-    margin-top: 5%;
-    border-radius: 5%;
-    height: 27px;
-}
-
-.taskBtn{
-    height: 19.3px;
-    border: none;
-
-}
-
-#taskOptions{
-    display:flex;
-    flex-direction: column;
-}
-
-#deleteBtn{
-    background-color: rgb(255, 157, 157);
-    border-radius: 0px 6px 0px 0px;
-
-}
-
-#editBtn{
-    background-color: rgb(124, 124, 255);
-    border-radius: 0px 0px 6px 0px;
-
-}
-
-#taskCard{
-    background-color: burlywood;
-    margin-bottom: 5%;
-    border-radius: 6px 0px 0px 6px;
-    padding:10px;
-    margin-left: -104px;
-}
-
-#divFlex{
-    display: flex;
-    flex-direction: row;
-
-}
-li{
-    list-style: none;
-
-}
-
 ul {
-    width: 100%;
+    width: 80%;
     margin: 0;
     padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 li {
     list-style: none;
-    background-color: palevioletred;
+    background-color: plum;
     margin: 0 0 10px 0;
     padding: 10px;
     border-radius: 5px;
-    width: 90%;
-    color: white;
+    width: 80%;
+    color: black;
     overflow-wrap: break-word;
 }
 
-button {
-    color: black;
-    float: right;
+#inputBox {
+    height: 20px;
+}
+
+#flexRowInputAndButton {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+#addTaskBtn {
+    padding: 10px;
+    font-size: medium;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(32, 170, 48);
+    color: white;   
+    margin: 5px 0 30px 0; 
+}
+
+#divFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+}
+
+#divFlex div {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+    height: fit-content;
+}
+
+#divFlex button {
+    padding: 10px;
+    font-size: medium;
+    border: none;
+    color: white;
+}
+
+#editBtn {
+    background-color: rgb(115, 129, 219);
+    border-radius: 0 5px 5px 0;
+}
+
+#deleteBtn {
+    background-color: rgb(205, 52, 52);
+    border-radius: 5px 0 0 5px;
 }

@@ -14,19 +14,18 @@
              <input id = "inputBox" type="text" v-model="newTask">
              <button @click="addTask" id = "addTaskBtn">Add task</button>
         </div>
-        <ul id = "taskList">
+        
+        <ul>
             <li v-for="x in tasks">
 
                 <div id = "divFlex">
-                    <div id = "taskCard">
+                    <div>
                         {{ x }}
                     </div>
 
-                    <div id = "taskOptions">
-
+                    <div>
                         <button id = "deleteBtn" class = "taskBtn" @click="deleteTask(x)">X</button>
                         <button id = "editBtn" class = "taskBtn" @click="editTask(x)">E</button>
-
                     </div>
                     
             

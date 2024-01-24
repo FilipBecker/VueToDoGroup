@@ -10,8 +10,10 @@ const app = Vue.createApp({
     },
     methods: {
         addTask() {
-            this.tasks.push(this.newTask);
-            this.newTask = "";
+            if (this.newTask != "") {
+                this.tasks.push(this.newTask);
+                this.newTask = "";
+            }
         },
         deleteTask(task) {
             this.tasks.splice(this.tasks.indexOf(task), 1);

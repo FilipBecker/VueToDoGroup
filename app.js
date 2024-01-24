@@ -3,7 +3,7 @@
 const app = Vue.createApp({
     data() {
         return {
-            message: "Hello World",
+            title: "My CheckList",
             tasks: [],
             newTask: ""
         }
@@ -25,6 +25,14 @@ const app = Vue.createApp({
         deleteTask(task) {
             this.tasks.splice(this.tasks.indexOf(task), 1);
             localStorage.setItem('tasksArray', JSON.stringify(this.tasks));
+        },
+        changeTask(task) {
+            const newTask = prompt("Enter new task");
+            if (newTask != "") {
+                this.tasks[this.tasks.indexOf(task)] = newTask;
+                localStorage.setItem('tasksArray', JSON.stringify(this.tasks));
+            }
+            
         }
     }
 }).mount('#app')

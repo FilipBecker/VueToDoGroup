@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
     <title>ToDo with Vue</title>
 </head>
-<body>
-    <div id="app">{{ message }}
-        <input type="text" v-model="newTask">
-        <button @click="addTask">add</button>
+<body id = "body">
+    <div id="app"><h2 id = "title">{{ title }}</h2>
+        <input id = "inputBox" type="text" v-model="newTask">
+        <button @click="addTask" id = "addTaskBtn">Add task</button>
 
-        <ol>
-            <li v-for="x in tasks">{{ x }} <button @click="deleteTask(x)">X</button></li>
-        </ol>
+        <ul id = "taskList">
+            <li v-for="x in tasks">{{ x }} <button @click="deleteTask(x)">D</button><button @click="changeTask(x)">C</button></li>
+        </ul>
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

@@ -12,8 +12,8 @@ const app = Vue.createApp({
 
     created() {
         const localStorageArray = JSON.parse(localStorage.getItem('tasksArray'));
-        const onlyTasks = localStorageArray.filter((task) => task != null);
-        this.tasks = localStorageArray ? onlyTasks : [];
+        const onlyTasks = localStorageArray ? localStorageArray.filter((task) => task != null) : [];
+        this.tasks = onlyTasks;
     },
 
     methods: {

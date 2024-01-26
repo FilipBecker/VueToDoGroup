@@ -13,10 +13,11 @@
         <div id = "flexRowInputAndButton">
              <input id = "inputBox" type="text" v-model="newTask">
              <button @click="addTask" id = "addTaskBtn">Add task</button>
+             <input id = "searchBox" type="text" v-model="search" placeholder="Search...">
         </div>
         
         <ul>
-            <li v-for="x in tasks">
+            <li v-for="x in tasks" v-show="x.includes(search)">
 
                 <div id = "divFlex">
                     <div>

@@ -5,13 +5,15 @@ const app = Vue.createApp({
         return {
             title: "My CheckList",
             tasks: [],
-            newTask: ""
+            newTask: "",
+            search: ""
         }
     },
 
     created() {
-        const localStorageArray = localStorage.getItem('tasksArray');
-        this.tasks = localStorageArray ? JSON.parse(localStorageArray) : [];
+        const localStorageArray = JSON.parse(localStorage.getItem('tasksArray'));
+        const onlyTasks = localStorageArray.filter((task) => task != null);
+        this.tasks = localStorageArray ? onlyTasks : [];
     },
 
     methods: {
@@ -28,7 +30,7 @@ const app = Vue.createApp({
         },
         editTask(task) {
             const newTask = prompt("Enter new task");
-            if (newTask != "") {
+            if (newTask != "" && newTask != null) {
                 this.tasks[this.tasks.indexOf(task)] = newTask;
                 localStorage.setItem('tasksArray', JSON.stringify(this.tasks));
             }

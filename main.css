@@ -90,3 +90,9 @@ li {
     background-color: rgb(205, 52, 52);
     border-radius: 5px 0 0 5px;
 }
+
+#searchBox {
+    height: 20px;
+    width: 40%;
+    margin: 10px auto;
+}
